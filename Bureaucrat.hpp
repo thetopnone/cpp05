@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:52:05 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/03 19:53:23 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/04 13:11:22 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class Bureaucrat{
 
 		void upGrade() const;
 		void downGrade() const;
+		void checkGrade() const;
 
 		class GradeTooHighException : public std::exception{
 			private:
@@ -44,6 +45,7 @@ class Bureaucrat{
 					return value;
 				}
 		};
+
 		class GradeTooLowException : public std::exception{
 			private:
 				int value;
@@ -56,6 +58,7 @@ class Bureaucrat{
 					return value;
 				}
 		};
+
 };
 
 #endif

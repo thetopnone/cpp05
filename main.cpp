@@ -6,8 +6,13 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:10:50 by akonstan          #+#    #+#             */
-/*   Updated: 2026/09/29 19:51:56 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/04 13:20:10 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Bureaucrat.hpp"
 
+int main(void){
+	Bureaucrat	a(0, "John");
+	return 0;
+}
