@@ -6,25 +6,18 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:52:10 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/04 16:00:35 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/04 18:56:06 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat(int _grade, std::string _name)
 	:grade(_grade)
 	,name(_name)
 	{
-		try{
-			checkGrade();
-		}	
-		catch (GradeTooHighException& e){
-			std::cerr << e.what() << std::endl;
-		}
-		catch (GradeTooLowException& e){
-			std::cerr << e.what() << std::endl;
-		}
+		checkGrade();
 	}
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other)
@@ -67,6 +60,10 @@ void Bureaucrat::downGrade(){
 		grade++;
 		checkGrade();
 		std::cout << this->getName() << ", got their grade decreased\n";
+}
+
+void signForm(Form& form){
+	form.beSigned();
 }
 
 std::ostream& operator<<(std::ostream &os, const Bureaucrat& brc){
