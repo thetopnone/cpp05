@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:52:10 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/04 13:18:26 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/04 13:22:58 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,35 @@ Bureaucrat::Bureaucrat(int _grade, std::string _name)
 	:grade(_grade)
 	,name(_name)
 	{
-		try
+		try{
 			checkGrade();
-		catch (GradeTooHighException& e)
+		}	
+		catch (GradeTooHighException& e){
 			std::cerr << e.what() << std::endl;
-		catch (GradeTooLowException& e)
+		}
+		catch (GradeTooLowException& e){
 			std::cerr << e.what() << std::endl;
+		}
 	};
 
 Bureaucrat::Bureaucrat(const Bureaucrat& other)
 	:grade(other.grade)
 	,name(other.name)
 	{
-		try
+		try{
 			checkGrade();
-		catch (GradeTooHighException& e)
+		}	
+		catch (GradeTooHighException& e){
 			std::cerr << e.what() << std::endl;
-		catch (GradeTooLowException& e)
+		}
+		catch (GradeTooLowException& e){
 			std::cerr << e.what() << std::endl;
+		}
 	};
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 {
-	void(other);
+	(void) other;
 	return (*this);
 }
 
