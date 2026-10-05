@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:52:10 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/04 18:56:06 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/05 19:41:57 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,14 @@ void Bureaucrat::downGrade(){
 		std::cout << this->getName() << ", got their grade decreased\n";
 }
 
-void signForm(Form& form){
-	form.beSigned();
+void Bureaucrat::signForm(Form& form){
+	try{
+		form.beSigned(*this);
+		std::cout << *this << " signed " << form << std::endl;
+	}
+	catch (const GradeTooLowException& e){
+		std::cout << *this << " couldn't sign " << form << " because " << e.what() << std::endl;
+	}
 }
 
 std::ostream& operator<<(std::ostream &os, const Bureaucrat& brc){
