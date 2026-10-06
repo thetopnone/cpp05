@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 16:52:51 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/05 19:50:36 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/06 20:00:35 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ class Form{
 			public:
 				GradeTooHighException(int val):value(val){}
 				const char *what() const throw(){
-					return "Form::GradeTooHighException\n";
+					return "Form::GradeTooHighException";
 				}
 		};
 
@@ -55,7 +55,7 @@ class Form{
 			public:
 			GradeTooLowException(int val):value(val){}
 				const char* what() const throw(){
-					return "Form::GradeTooLowException\n";
+					return "Form::GradeTooLowException";
 				}
 		};
 };

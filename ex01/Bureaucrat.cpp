@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:52:10 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/05 19:41:57 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/06 19:43:53 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void Bureaucrat::signForm(Form& form){
 		form.beSigned(*this);
 		std::cout << *this << " signed " << form << std::endl;
 	}
-	catch (const GradeTooLowException& e){
+	catch (const Form::GradeTooLowException& e){
 		std::cout << *this << " couldn't sign " << form << " because " << e.what() << std::endl;
 	}
 }

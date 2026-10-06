@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 16:52:55 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/05 19:50:37 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/06 19:43:01 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ bool& Form::getIsSigned(){
 
 void	Form::beSigned(const Bureaucrat& brc){
 	if (brc.getGrade() > sign_grade)
-		throw Bureaucrat::GradeTooLowException(brc.getGrade());
+		throw Form::GradeTooLowException(brc.getGrade());
 	is_signed = true;
 }
 
