@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 16:52:51 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/11 18:38:26 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/15 18:23:18 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class AForm{
 		const std::string&	getTarget() const;
 		bool	getIsSigned() const;
 
-		virtual void	beSigned(const Bureaucrat& brc);
+		void	beSigned(const Bureaucrat& brc);
 		virtual void	beExecuted() const = 0;
 		void	execute(Bureaucrat const & executor) const;
 		void	canSign(const Bureaucrat& brc);
@@ -53,6 +53,9 @@ class AForm{
 				const char *what() const throw(){
 					return "Form::GradeTooHighException";
 				}
+				int getValue(){
+					return value;
+				}
 		};
 
 		class GradeTooLowException :public std::exception{
@@ -62,6 +65,9 @@ class AForm{
 				GradeTooLowException(int val):value(val){}
 				const char* what() const throw(){
 					return "Form::GradeTooLowException";
+				}
+				int getValue(){
+					return value;
 				}
 		};
 
@@ -73,7 +79,9 @@ class AForm{
 				const char *what() const throw(){
 					return "Form::FormNotSignedException";
 				}
-
+				int getValue(){
+					return value;
+				}
 		};
 };
 
