@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:52:05 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/04 15:23:53 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/19 13:45:59 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ class Bureaucrat{
 			public:
 				GradeTooHighException(int val) : value(val) {}
 				const char* what() const throw(){
-					return "Bureaucrat::GradeTooHighException\n";
+					return "Bureaucrat::GradeTooHighException";
 				}
 				int getValue(){
 					return value;
@@ -52,7 +52,7 @@ class Bureaucrat{
 			public:
 				GradeTooLowException(int val) : value(val) {}
 				const char* what() const throw(){
-					return "Bureaucrat::GradeTooLowException\n";
+					return "Bureaucrat::GradeTooLowException";
 				}
 				int getValue(){
 					return value;

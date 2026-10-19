@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:10:50 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/04 16:02:13 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/19 13:44:56 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,29 +26,11 @@ int main(void){
 
 	std::cout << "\nTESTING GRADING FUNCTIONS\n\n";
 
-	try{
-		b1.upGrade();
-	}
-	catch (const Bureaucrat::GradeTooHighException& e){
-		std::cerr << e.what() << std::endl;
-	}
-
-	try{
-		b1.downGrade();
-		b2.downGrade();
-	}
-	catch (const Bureaucrat::GradeTooLowException& e){
-		std::cerr << e.what() << std::endl;
-	}
-
-	try{
-		b2.upGrade();
-		b4.upGrade();
-	}
-	catch (const Bureaucrat::GradeTooHighException& e){
-		std::cerr << e.what() << std::endl;
-	}
-
+	b1.upGrade();
+	b1.downGrade();
+	b2.downGrade();
+	b2.upGrade();
+	b4.upGrade();
 	b4.downGrade();
 
 	std::cout << "\nTESTING CONSTRUCTOR EXCEPTION HANDLING\n\n";

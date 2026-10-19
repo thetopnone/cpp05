@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:52:10 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/04 16:50:37 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/19 13:47:06 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,27 @@ std::string const& Bureaucrat::getName() const{
 }
 
 void Bureaucrat::upGrade(){
+	try{
+		if (grade == 1)
+			throw GradeTooHighException(grade);
 		grade--;
-		checkGrade();
 		std::cout << this->getName() << ", got their grade increased\n";
+	}
+	catch (const GradeTooHighException& e){
+			std::cerr << e.what() << std::endl;
+	}
 }
 
 void Bureaucrat::downGrade(){
+	try{
+		if (grade == 150)
+			throw GradeTooLowException(grade);
 		grade++;
-		checkGrade();
 		std::cout << this->getName() << ", got their grade decreased\n";
+	}
+	catch (const GradeTooLowException& e){
+			std::cerr << e.what() << std::endl;
+	}
 }
 
 std::ostream& operator<<(std::ostream &os, const Bureaucrat& brc){
