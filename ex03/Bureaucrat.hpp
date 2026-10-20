@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:52:05 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/11 18:28:06 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/20 16:58:26 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Bureaucrat{
 		int	grade;
 		std::string const name;
 	public:
+		Bureaucrat();
 		Bureaucrat(int _grade, std::string _name);
 		Bureaucrat(const Bureaucrat& other);
 		Bureaucrat& operator=(const Bureaucrat& other);

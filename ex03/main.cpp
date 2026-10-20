@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 16:21:14 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/19 16:48:15 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/20 16:45:08 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(void){
 		almightyBrc.executeForm(*form);
 		delete form;
 	}
-	catch (const Intern::FormNameNotFound& e){
+	catch (const Intern::FormNameNotFoundException& e){
 		std::cerr << "Intern couldn't create the form: " << e.what() << std::endl;
 	}
 
@@ -37,7 +37,7 @@ int main(void){
 		almightyBrc.executeForm(*form);
 		delete form;
 	}
-	catch (const Intern::FormNameNotFound& e){
+	catch (const Intern::FormNameNotFoundException& e){
 		std::cerr << "Intern couldn't create the form: " << e.what() << std::endl;
 	}
 
@@ -47,7 +47,7 @@ int main(void){
 		almightyBrc.executeForm(*form);
 		delete form;
 	}
-	catch (const Intern::FormNameNotFound& e){
+	catch (const Intern::FormNameNotFoundException& e){
 		std::cerr << "Intern couldn't create the form: " << e.what() << std::endl;
 	}
 
@@ -59,7 +59,7 @@ int main(void){
 		almightyBrc.executeForm(*form);
 		delete form;
 	}
-	catch (const Intern::FormNameNotFound& e){
+	catch (const Intern::FormNameNotFoundException& e){
 		std::cerr << "Intern couldn't create the form: " << e.what() << std::endl;
 	}
 
@@ -69,7 +69,7 @@ int main(void){
 		almightyBrc.executeForm(*form);
 		delete form;
 	}
-	catch (const Intern::FormNameNotFound& e){
+	catch (const Intern::FormNameNotFoundException& e){
 		std::cerr << "Intern couldn't create the form: " << e.what() << std::endl;
 	}
 	std::cout << "\nEND OF TESTING" << std::endl;

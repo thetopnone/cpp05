@@ -6,13 +6,18 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:52:10 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/19 13:46:56 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/20 16:48:54 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
+Bureaucrat::Bureaucrat()
+	: grade(150)
+	, name("Jane Doe")
+	{}
+	
 Bureaucrat::Bureaucrat(int _grade, std::string _name)
 	:grade(_grade)
 	,name(_name)
@@ -27,8 +32,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat& other)
 		checkGrade();
 	}
 
-Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
-{
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other){
 	(void) other;
 	return (*this);
 }

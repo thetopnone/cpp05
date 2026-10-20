@@ -14,6 +14,10 @@
 #include <stdlib.h>
 #include <time.h>
 
+RobotomyRequestForm::RobotomyRequestForm()
+	: AForm::AForm(150, 150, "null_Robotomy_Request_Form", "null_target")
+	{}
+
 RobotomyRequestForm::RobotomyRequestForm(const std::string& _target)
 	: AForm::AForm(72, 45, "Robotomy Request", _target)
 	{}

@@ -6,12 +6,17 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:52:10 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/19 13:48:25 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/20 16:43:13 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+
+Bureaucrat::Bureaucrat()
+	: grade(150)
+	, name("Jane Doe")
+	{}
 
 Bureaucrat::Bureaucrat(int _grade, std::string _name)
 	:grade(_grade)

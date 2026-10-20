@@ -6,7 +6,7 @@
 /*   By: akonstan <akonstan@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 16:20:22 by akonstan          #+#    #+#             */
-/*   Updated: 2026/10/19 16:43:51 by akonstan         ###   ########.fr       */
+/*   Updated: 2026/10/20 16:45:14 by akonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,5 @@ static int	extractFormID(std::string formName){
 		if (formName == formNames[i])
 			return i;
 	}
-	throw Intern::FormNameNotFound(-1);
+	throw Intern::FormNameNotFoundException(-1);
 }
